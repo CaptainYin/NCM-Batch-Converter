@@ -33,26 +33,28 @@
 3. 双击：
 
 ```text
-NCM一键批量转换_单文件版.cmd
+NCM-Batch-Converter.cmd
 ```
 
 4. 选择包含 `.ncm` 文件的文件夹。
 5. 选择输出目录。
 6. 点击“开始批量转换”。
 
-### 方法 2：脚本 + 启动器
+### 方法 2：生成单文件版 CMD
 
-运行：
+仓库保留可审阅的 PowerShell 源码，并提供构建脚本生成与 v1.2 发布包同类的自包含单文件启动器：
 
-```text
-NCM-Batch-Converter.cmd
+```powershell
+powershell -ExecutionPolicy Bypass -File .\Build-SingleFile.ps1
 ```
 
-它会调用同目录下的：
+生成：
 
 ```text
-NCM_Batch_Converter.ps1
+NCM一键批量转换_单文件版.cmd
 ```
+
+之后这个 `.cmd` 可以单独复制到其他位置运行，不依赖旁边的 `.ps1`。
 
 ### 方法 3：诊断启动问题
 
@@ -109,7 +111,7 @@ UnexpectedToken: 删除原
 NCM-Batch-Converter/
 ├─ NCM_Batch_Converter.ps1
 ├─ NCM-Batch-Converter.cmd
-├─ NCM一键批量转换_单文件版.cmd
+├─ Build-SingleFile.ps1
 ├─ NCM一键批量转换_启动.cmd
 ├─ NCM启动诊断.cmd
 ├─ START_NCM_Converter.cmd
