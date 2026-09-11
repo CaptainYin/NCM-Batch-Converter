@@ -1,0 +1,21 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Generated audio
+Converted/
+*.mp3
+*.flac
+*.ogg
+*.wav
+*.ape
+*.m4a
+
+# Source NCM files
+*.ncm
+
+# Temporary files
+*.tmp
